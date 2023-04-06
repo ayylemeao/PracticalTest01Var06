@@ -1,18 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".PracticalTest01Var06MainActivity">
 
-    <TextView
+    <EditText
+        android:id="@+id/number1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:ems="4"
+        android:saveEnabled="false"
+        android:enabled="true"
+        android:inputType="number"
+        android:text="number1"
+        android:layout_alignParentLeft="true"
+        android:gravity="center"
+        />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <EditText
+        android:id="@+id/number2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="4"
+        android:saveEnabled="false"
+        android:enabled="true"
+        android:inputType="number"
+        android:text="number2"
+        android:layout_alignLeft="@id/number1"
+        android:layout_alignRight="@id/number3"
+        android:gravity="center"
+        />
+
+    <EditText
+        android:id="@+id/number3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="4"
+        android:saveEnabled="false"
+        android:enabled="true"
+        android:inputType="number"
+        android:text="number3"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        />
+
+
+
+    <CheckBox
+        android:id="@+id/checkbox1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="6"
+        android:text="checkbox1"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/number1"
+        android:gravity="center"
+        />
+
+    <CheckBox
+        android:id="@+id/checkbox2"
+        android:layout_width="212dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/number2"
+        android:layout_alignLeft="@id/checkbox1"
+        android:layout_alignRight="@id/checkbox3"
+        android:layout_marginLeft="101dp"
+
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="98dp"
+        android:ems="6"
+        android:gravity="center"
+        android:text="checkbox2" />
+
+    <CheckBox
+        android:id="@+id/checkbox3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="6"
+        android:text="checkbox3"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/number3"
+        android:gravity="center"
+        />
+
+    <Button
+        android:id="@+id/play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="play"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/checkbox1"
+        android:gravity="center"
+        />
+
+
+
+
+
+
+
+</RelativeLayout>
